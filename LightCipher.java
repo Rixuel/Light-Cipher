@@ -607,7 +607,7 @@ public class LightCipher {
 	 	revbtn.addActionListener(new ActionListener(){
 	         public void actionPerformed(ActionEvent e)
 	         {
-	             //action listener here
+	        	 //action listener here
 	        	 String reverse = new StringBuffer(output.getText()).reverse().toString();
 	        	 output.setText(reverse);
 	         }
@@ -615,8 +615,8 @@ public class LightCipher {
 	     
 	     return revbtn;
 	}
-    
-        
+
+
     private static JButton saveToTxt()
    	{
     	JButton savebtn = new JButton("Save to .txt File");
@@ -638,21 +638,21 @@ public class LightCipher {
             			"\"" + fileStr + "\"" + 
             			" will be saved in the same directory as the program."
             			);
-            		      		
+            		
             		// Write to a txt file.
             		String content = output.getText();
                     content = content.replaceAll("(?!\\r)\\n", "\r\n"); // For windows notepad.
-            		
-					PrintWriter out = new PrintWriter(fileStr);
-					out.println(content);
-					out.close();
-				} 
+
+                    PrintWriter out = new PrintWriter(fileStr);
+                    out.println(content);
+                    out.close();
+            	}
             	catch (FileNotFoundException e1) 
             	{
-					e1.printStackTrace();
-					System.exit(1);
-				}
-            	
+            		e1.printStackTrace();
+            		System.exit(1);
+            	}
+
             }
         });
         
@@ -669,11 +669,11 @@ public class LightCipher {
     	cbtn.setBorder(BorderFactory.createLineBorder(Color.RED));
     	cbtn.setBackground(new Color(44, 40, 38)); //244, 240, 238
     	cbtn.setBounds(728, 2, 60, 36);
-        
+
     	cbtn.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                //action listener here
+            	//action listener here
             	input.setText("");
             	output.setText("");
             }
@@ -684,8 +684,6 @@ public class LightCipher {
     
     
 }
-
-
 
 
 
