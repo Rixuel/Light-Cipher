@@ -7,31 +7,31 @@
 ### 1337 Speak
 Turn the output text result into 1337 speak.
 
-## TYHUD Speak
+### TYHUD Speak
 "Turn Your Head Upside Down" makes the text output upside down. (NOTE: No special characters are used.)
 
-## Copy Select All
+### Copy Select All
 Copy all selected text of the output text.
 
-## Code On!
+### Code On!
 Main function to encrypt your input text.
 
-## Encrypt Level
+### Encrypt Level
 Encrypt difficulty used to convert your input text into a light encryted output text.
 
-## Swap
+### Swap
 Swapping the 2 text boxes by click on the button " <=> "
 
-## Reverse
+### Reverse
 Reverse all characters order of the output text.
 
-## Save to .txt File
+### Save to .txt File
 Save the output text into a .txt File.
 
-## Clear
+### Clear
 Clear both text boxes.
 
-### Shortcuts:
+## Shortcuts:
 - Alt+C - Copy Select All
 - Alt+H - Open this Help message
 - Alt+L - 1337 Speak
