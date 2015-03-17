@@ -634,21 +634,24 @@ public class LightCipher {
             	
             	try 
             	{
-    			JOptionPane.showMessageDialog(null, 
-	    			"\"" + fileStr + "\"" + 
-	    			" will be saved in the same directory as the program."
-	    			);
+            		JOptionPane.showMessageDialog(null, 
+            			"\"" + fileStr + "\"" + 
+            			" will be saved in the same directory as the program."
+            			);
             		      		
             		// Write to a txt file.
-			PrintWriter out = new PrintWriter(fileStr);
-			out.println(output.getText());
-			out.close();
-		} 
+            		String content = output.getText();
+                    content = content.replaceAll("(?!\\r)\\n", "\r\n"); // For windows notepad.
+            		
+					PrintWriter out = new PrintWriter(fileStr);
+					out.println(content);
+					out.close();
+				} 
             	catch (FileNotFoundException e1) 
             	{
-			e1.printStackTrace();
-			System.exit(1);
-		}
+					e1.printStackTrace();
+					System.exit(1);
+				}
             	
             }
         });
@@ -681,8 +684,6 @@ public class LightCipher {
     
     
 }
-
-
 
 
 
