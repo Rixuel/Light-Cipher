@@ -634,21 +634,22 @@ public class LightCipher {
             	
             	try 
             	{
-            		JFrame frame2 = new JFrame();
-            		JOptionPane.showMessageDialog(frame2, 
-            			"\"" + fileStr + "\"" + 
-            			" will be saved in the same directory as the program."
-            			);
-            		
+    			JOptionPane.showMessageDialog(null, 
+	    			"\"" + fileStr + "\"" + 
+	    			" will be saved in the same directory as the program."
+	    			);
+            		      		
             		// Write to a txt file.
-					PrintWriter out = new PrintWriter(fileStr);
-					out.println(output.getText());
-					out.close();
-				} 
+			PrintWriter out = new PrintWriter(fileStr);
+			out.println(output.getText());
+			out.close();
+		} 
             	catch (FileNotFoundException e1) 
             	{
-					e1.printStackTrace();
-				}
+			e1.printStackTrace();
+			System.exit(1);
+		}
+            	
             }
         });
         
