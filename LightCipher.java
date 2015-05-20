@@ -1,13 +1,13 @@
 /*
  * Light Cipher
  * Send coded messages to your friends.
- * It lightly encrypts your messages. Messages can be decrypted too.
+ * It lightly codes your messages. Messages can be decoded too.
  * 
  * @author Lord Rixuel
  * @since 2015-03-16
  */
 
-package crypto;
+package code;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -223,7 +223,7 @@ public class LightCipher {
     
     private static JButton tyhudSpeak()
     {
-    	JButton tyhudbtn = new JButton("TYHUD Speak");
+    	JButton tyhudbtn = new JButton("Upside Down");
     	tyhudbtn.setMnemonic('t'); // Shortcut: Alt + T
     	tyhudbtn.setFont(new Font("Verdana", Font.PLAIN, 11));
     	tyhudbtn.setForeground(new Color(255, 255, 255));
@@ -365,19 +365,19 @@ public class LightCipher {
             public void actionPerformed(ActionEvent e)
             {
                 //action listener here
-            	output.setText(cryptoText( input.getText() ));
+            	output.setText(codeText( input.getText() ));
             }
         });
         
         return enbutton;
     }
-    private static String cryptoText(String str)
+    private static String codeText(String str)
     {
     	StringBuilder sb = new StringBuilder(str);
 
     	for(int i=0; i<sb.length(); i++)
     	{
-    		// Encryption. ASCII value changing.
+    		// Coding. ASCII value changing.
     		char value = sb.charAt(i);
     		int nextValue = (int)value + level;
     		char enValue = (char)nextValue;
@@ -484,9 +484,9 @@ public class LightCipher {
             	output.setText
             	(
             		"Result will show up in this text box...\n" +
-    				"\nHow to use Encrypt Level?\n" +
-            		" Unsoft to decrypt Soft message.\n" +
-            		" Soft to decrypt Unsoft message.\n" +
+    				"\nHow to use Code Level?\n" +
+            		" Unsoft to decode Soft message.\n" +
+            		" Soft to decode Unsoft message.\n" +
             		" etc.\n"
             	);
             }
@@ -497,7 +497,7 @@ public class LightCipher {
     
     private static JLabel labelLvl()
     {
-    	JLabel lbl = new JLabel("Encrypt Level:");
+    	JLabel lbl = new JLabel("Code Level:");
     	lbl.setFont(new Font("Consolas", Font.PLAIN, 12));
         lbl.setForeground(new Color(255, 255, 255));
         lbl.setBounds(50, 2, 120, 36);
@@ -508,7 +508,7 @@ public class LightCipher {
     private static JComboBox<String> dropDownMenu()
     {
     	String[] choices = { 
-    			"No Encryption",
+    			"No Coding",
     			"Soft", 
     			"Strong",
     			"Extreme",
@@ -528,7 +528,7 @@ public class LightCipher {
         cb.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-		        if(cb.getSelectedItem() == "No Encryption")
+		        if(cb.getSelectedItem() == "No Coding")
 		        {
 		        	level = 0;
 		        }
@@ -630,7 +630,7 @@ public class LightCipher {
             public void actionPerformed(ActionEvent e)
             {
                 //action listener here
-            	String fileStr = "cryptedText.txt";
+            	String fileStr = "codedText.txt";
             	
             	try 
             	{
