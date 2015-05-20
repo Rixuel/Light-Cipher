@@ -14,10 +14,10 @@
 - Copy all selected text of the output text.
 
 ### Code On!
-- Main function to encrypt your input text.
+- Main function to code your input text.
 
-### Encrypt Level
-- Encrypt difficulty used to convert your input text into a light encryted output text.
+### Code Level
+- Code difficulty used to convert your input text into a light encryted output text.
 
 ### Swap
 - Swapping the 2 text boxes by click on the button " <=> "
@@ -40,5 +40,5 @@
 - Alt+T - TurnYourHeadUpsideDown Speak
 - Alt+Enter - Code On!
 
-Simple example of how to decrypt an encrypted message: If your friend use an encrypted message with Encrypt Level "Soft", then you have to use Encrypt Level "Unsoft" to decrypt the message.
+Simple example of how to decode a code message: If your friend use a coded message with Code Level "Soft", then you have to use Code Level "Unsoft" to uncode the message.
 
